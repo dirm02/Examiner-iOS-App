@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create New Case</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">First name</ion-label>
+        <ion-input [(ngModel)]="newCase.firstName" name="firstName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Last name</ion-label>
+        <ion-input [(ngModel)]="newCase.lastName" name="lastName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">MRN</ion-label>
+        <ion-input [(ngModel)]="newCase.mrn" name="mrn" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="newCase.examiner" name="examiner" required placeholder="Examiner"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="newCase.location" name="location" required placeholder="Location of Exam"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="button-container">
+      <ion-button expand="block" fill="clear" (click)="saveCase()">
+        <img src="assets/button_savestartcase.png" alt="Case List">
+      </ion-button>
+    </div>    
+  </form>
+</ion-content>

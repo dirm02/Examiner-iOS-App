@@ -1,0 +1,59 @@
+ion-content {
+    --background: url('../../assets/bg.jpg') no-repeat center center / cover;
+  }
+  ion-list{
+    background: transparent;
+  }
+  ion-item{
+    margin: 10px;
+  }
+  ion-card {
+    border-radius: 10px;
+    min-width: 300px;
+  }
+  
+  ion-card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ion-card-title {
+    font-size: 1.2rem;
+  }
+  
+  ion-card-subtitle {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .in-progress {
+    color: red;
+  }
+  
+  .archived {
+    color: grey;
+  }
+  
+  .exam-complete {
+    color: blue;
+  }
+  
+  .header-back-icon{
+    height: 20px;
+  }
+  .case-content{
+    display: flex;
+  }
+  .case-sub-content{
+    width: 170px;
+  }
+
+  .case-title{
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  .case-detail{
+    font-size: 1rem;
+  }
+  

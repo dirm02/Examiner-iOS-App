@@ -1,0 +1,41 @@
+ion-content {
+  --background: url('../../assets/bg.jpg') no-repeat center center / cover;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  margin-top: 50px;
+  height: 120px;
+}
+
+.start-case-button img, .case-list-button img {
+  width: 80%;
+  height: auto;
+}
+
+.start-case-button {
+  margin-bottom: 20px;
+}
+
+.buttons{
+  margin-bottom: 60px;
+}
+  
+.icon-close{
+  margin-left: 25px;
+  height: 20px;  
+}
+.close-button{
+  margin-top: 50px;
+}
+.logo-container{
+  display: flex;
+  align-items: center;
+}

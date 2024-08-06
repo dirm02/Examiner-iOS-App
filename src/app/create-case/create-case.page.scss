@@ -1,0 +1,32 @@
+ion-content {
+    --background: url('../../assets/bg.jpg') no-repeat center center / cover;
+    padding: 20px !important;    
+  }
+  form{
+    padding: 0px 10px;
+    
+  }
+  ion-list {
+    margin: 10px 0 0 0;
+    padding: 0;
+    background: transparent;
+  }
+  
+  ion-item {    
+    margin-bottom: 10px;
+  }
+  
+  .button-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .save-button {
+    --background: #00aaff;
+    --border-radius: 20px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+  }
+  

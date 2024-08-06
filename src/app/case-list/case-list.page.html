@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">
+        <ion-icon slot="icon-only" src="assets/header_back.png"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Case List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let case of cases">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Patient</ion-card-subtitle>
+          <ion-card-title>{{ case.name }}</ion-card-title>          
+        </ion-card-header>
+        <ion-card-content>
+          <div class="case-content">
+            <div class="case-sub-content">
+              <p class="case-ttile">MRN</p>
+              <p class="case-detail">{{ case.mrn }}</p>
+            </div>
+            <div class="case-sub-content">
+              <p class="case-ttile">Status</p>
+              <p class="case-detail" [ngClass]="getStatusClass(case.status)">{{ case.status }}</p>
+            </div>
+          </div>
+          <div class="case-content">
+            <div class="case-sub-content">
+              <p class="case-ttile">Date/Time</p>
+              <p class="case-detail">{{ case.dateTime }}</p>
+            </div>
+            <div class="case-sub-content">
+              <p class="case-ttile">Examiner</p>
+              <p class="case-detail">{{ case.examiner }}</p>
+            </div>
+          </div>          
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

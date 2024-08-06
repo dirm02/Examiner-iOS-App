@@ -1,0 +1,19 @@
+
+<ion-content>
+  <div class="container">
+    <div class="logo-container  ">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      <ion-button expand="block" fill="clear" class="close-button">
+        <img src="assets/icon_close.png" alt="Logo" class="icon-close">
+      </ion-button>
+    </div>    
+    <div class="buttons">
+      <ion-button expand="block" fill="clear" class="start-case-button" [routerLink]="['/create-case']">
+        <img src="assets/button_startnew.png" alt="Start New Case">
+      </ion-button>
+      <ion-button expand="block" fill="clear" class="case-list-button" [routerLink]="['/case-list']">
+        <img src="assets/button_caselist.png" alt="Case List">
+      </ion-button>
+    </div>   
+  </div>
+</ion-content>

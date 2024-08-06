@@ -1,0 +1,7 @@
+{
+  "name": "Examiner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

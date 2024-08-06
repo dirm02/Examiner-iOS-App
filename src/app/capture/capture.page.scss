@@ -1,0 +1,50 @@
+ion-content {
+    --background: url('../../assets/bg.jpg') no-repeat center center / cover;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+  
+  .capture-container {
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+  }
+  
+  .capture-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .timer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .button-container {
+    display: flex;    
+    margin-top: 30px;
+  }
+  
+  ion-button {
+    --border-radius: 10px;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  ion-icon {
+    margin-right: 5px;
+  }
+
+  .swap-camera-icon{
+    width: 25px;
+    height: 25px;
+  }
+  

@@ -34,7 +34,7 @@ export class CreateCasePage implements OnInit {
   }
   
   saveCase() {
-    this.router.navigate(['tabs/capture']);
+    this.router.navigate(['tabs/case-list']);
     // Implement the logic to save the case
     // this.caseService.saveCase(this.newCase).subscribe(
     //   response => {

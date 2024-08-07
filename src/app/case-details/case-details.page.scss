@@ -1,0 +1,100 @@
+ion-content {
+    --background: url('../../assets/images/splash/bg.jpg') no-repeat center center / cover;
+}
+.header{
+    color: #ccc;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.Content{
+    margin: 0;
+}
+.Patient-Content{
+    margin: 0;
+    font-size: 1.2em;    
+}
+
+
+.case-details-container {
+    padding: 0 10px;
+
+    .case-header, .case-info, .media-section {
+        padding: 0 10px;        
+        background-color: white;
+        color: black;        
+    }
+    .case-header{
+        margin-bottom: 2px;
+        margin-top: 10px;
+        padding: 18px;
+    }
+    
+    .case-info {
+        display: flex;
+        flex-direction: column;
+        padding: 18px;
+        margin-bottom: 2px;
+
+        .patient{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+        }
+        .content-div{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 3px 0;
+        }
+        display: flex;
+        .icon{
+            scale: 0.7;
+        }
+    }
+
+    .media-section {
+        padding: 18px;
+        .media-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+
+            .media-thumbnail {
+                width: 50px;
+                height: 50px;
+                padding: 2px;
+                margin-top: 10px;
+                border-radius: 3px;
+            }
+
+            .import-image {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 3px;
+                margin-top: 10px;
+                background-color: #07B7F3;
+                cursor: pointer;
+        
+                img {
+                    width: 50%;
+                }
+        
+                span {
+                    font-size: 0.8em;
+                    text-align: center;
+                }
+            }
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;    
+        }
+    }
+
+}
+    

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonInput,
         IonLabel, IonItem, IonList, IonBackButton, IonButtons } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
+import { CaseService } from '../service/case.service';
 
 @Component({
   selector: 'app-create-case',
@@ -14,37 +15,21 @@ import { Router } from '@angular/router';
             IonLabel, IonItem, IonList, IonBackButton, IonButtons]
 })
 export class CreateCasePage implements OnInit {
+  newCase: any = {};
 
-  newCase = {
-    firstName: '',
-    lastName: '',
-    mrn: '',
-    examiner: '',
-    location: ''
-  };
-
-  constructor(private router: Router) { }
+  constructor(private router: Router, private caseService: CaseService) { }  
 
   ngOnInit() { }
 
   onSubmit() {
-    console.log('Case created:', this.newCase);
-    // You can add your logic here to save the case
-    this.router.navigate(['/case-list']);
+    this.saveCase();
   }
-  
+
   saveCase() {
-    this.router.navigate(['tabs/case-list']);
-    // Implement the logic to save the case
-    // this.caseService.saveCase(this.newCase).subscribe(
-    //   response => {
-    //     console.log('Case saved successfully:', response);
-    //     // Navigate to the Capture page
-    //     this.router.navigate(['/capture']);
-    //   },
-    //   error => {
-    //     console.error('Error saving case:', error);
-    //   }
-    // );
+    this.router.navigate(['tabs/capture']);
+
+    this.caseService.saveCase(this.newCase);
+    // Optionally, you can navigate back or show a confirmation message here
+    console.log('Case saved:', this.newCase);
   }
 }

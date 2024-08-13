@@ -4,9 +4,15 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 bootstrapApplication(AppComponent, {
   providers: [
+    SQLite,
+    SplashScreen,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),

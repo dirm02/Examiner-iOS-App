@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCardContent, IonCardSubtitle
         , IonCardTitle, IonCardHeader, IonCard, IonItem, IonList, IonBackButton
         , IonButtons, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { CaseService } from '../service/case.service';
 
 @Component({
   selector: 'app-case-list',
@@ -16,33 +17,18 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCardContent, IonCardSub
 })
 export class CaseListPage implements OnInit {
 
-  cases = [
-    {
-      name: 'Sarah Smith',
-      status: 'In Progress',
-      mrn: '0114151',
-      dateTime: '01/02/22 05:24',
-      examiner: 'Holly Jacobs'
-    },
-    {
-      name: 'Jane Mary Simmons',
-      status: 'Archived',
-      mrn: '0144187',
-      dateTime: '01/02/22 10:58',
-      examiner: 'Holly Jacobs'
-    },
-    {
-      name: 'Thomas Andersson',
-      status: 'Exam Complete',
-      mrn: '0284187',
-      dateTime: '01/03/22 07:22',
-      examiner: 'Holly Jacobs'
-    }
-  ];
+  cases: any = [];
 
-  constructor() { }
+  constructor(private caseService: CaseService) { 
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.loadCases();
+  }
+
+  async loadCases() {
+    this.cases = await this.caseService.getCases();
+  }
 
   getStatusClass(status: string) {
     switch (status) {
